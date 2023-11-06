@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        nav{
+            background-color: chocolate;
+            height: 100px;
+            width: 100%;
+        }
+        label.heading{
+            color: white;
+            font-size: 28px;
+            line-height: 70px;
+            padding:10px 100px;
+            font-weight: bolder;
+        }
+        nav ul{
+            float: right;
+            margin-right: 20px;
+        }
+        nav ul li{
+            display: inline-block;
+            line-height: 90px;
+        }
+        nav ul li a{
+            color: white;
+            font-size: 20px;
+            padding: 8px 13px;
+            border-radius: 3px;
+            text-transform: uppercase;
+        }
+        a.active,a:hover{
+            color: rgb(255, 123, 0);
+            background-color: white;
+        }
+        .checkbutton{
+            font-size: 30px;
+            color: white;
+            float: right;
+            line-height: 80px;
+            margin-right: 40px;
+            cursor: pointer;
+        }
+        #check{
+            display: none;
+
+        }
+        @media (max-width:952px){
+            label.heading{
+                font-size: 30px;
+                padding-left: 50px;
+            }
+            nav ul li a{
+                font-size: 16px;
+            }
+        }
+        @media (max-width:858px){
+            .checkbutton{
+                display: block;
+            }
+            ul{
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background-color: aqua;
+                top: 100px;
+                left: -100%;
+                text-align: center;
+                transition: all 2s;
+            }
+            nav ul li{
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+            }
+            nav ul li a{
+                font-size: 20px;
+            }
+            a:hover,a.active{
+                background: none;
+                color: blueviolet;
+            }
+            #check:checked ~ ul{
+                left: 0;
+            }
+        }
+
+
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu bad</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbutton">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <label class="heading">MenuBar</label>
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Enquiry</a></li>  
+              </ul>
+    </nav>
+    
+</body>
+</html>
